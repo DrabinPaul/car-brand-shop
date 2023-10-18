@@ -1,8 +1,18 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FaCar } from 'react-icons/fa';
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProviders";
 
 
 const Header = () => {
+
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+            .then()
+            .catch()
+    };
 
     const links = <>
         <NavLink to='/' className={({ isActive, isPending }) =>
@@ -32,8 +42,8 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="flex items-center justify-center">
-                <a className="text-2xl lg:text-3xl mr-1  font-bold text-[#EA001E]">D<span className="text-black">MOTORS</span></a>
-                <FaCar className="text-2xl lg:text-3xl text-[#EA001E]"></FaCar>
+                    <a className="text-2xl lg:text-3xl mr-1  font-bold text-[#EA001E]">D<span className="text-black">MOTORS</span></a>
+                    <FaCar className="text-2xl lg:text-3xl text-[#EA001E]"></FaCar>
                 </div>
 
             </div>
@@ -44,11 +54,26 @@ const Header = () => {
             </div>
 
             <div className="navbar-end ">
-
-
-                <button className="btn text-[#EA001E]">Login</button>
-
-
+                {
+                    user && <div>
+                        <h2 className="text-black font-semibold text-sm  lg:text-lg pr-2">{user.displayName}</h2>
+                    </div>
+                }
+                <label tabIndex={0} className="avatar online mr-2">
+                    {user &&
+                        <div className="w-10 rounded-full">
+                            <img src={user.photoURL} />
+                        </div>
+                    }
+                </label>
+                {
+                    user ?
+                        <button onClick={handleLogOut} className="btn text-[#EA001E]">Logout</button>
+                        :
+                        <Link className="" to="/login">
+                            <button className="btn text-[#EA001E]">Login</button>
+                        </Link>
+                }
             </div>
 
 

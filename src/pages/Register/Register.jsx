@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { updateProfile } from 'firebase/auth';
 import { FcGoogle } from 'react-icons/fc';
 import { AuthContext } from '../../providers/AuthProviders';
+import { FaCar } from 'react-icons/fa';
 
 const Register = () => {
 
@@ -79,11 +80,11 @@ const Register = () => {
                 <div className="hero min-h-screen">
                     <div className="hero-content  flex-col lg:flex-row">
                         <div className="text-center lg:text-left p-5">
-                            <div className='flex justify-center pb-5'>
-                                <img src="https://pro-theme.com/html/dvents/assets/media/general/ui-decor-1.png" alt="" />
+                            <div className='flex justify-center pb-3'>
+                            <FaCar className="text-2xl lg:text-6xl text-[#EA001E]"></FaCar>
                             </div>
-                            <h1 className="text-5xl text-center font-extrabold"><span className='text-[#fe3e01]'>Register</span> your account now!</h1>
-                            <p className="py-6 text-center text-[#777]">Register now to be a part of our wedding celebration! Do not miss out on updates, exclusive invitations, and important details. Join us in making our special day even more memorable!</p>
+                            <h1 className="text-5xl text-center font-extrabold"><span className='text-[#EA001E]'>Register</span> your account now!</h1>
+                            <p className="py-6 text-center text-[#777]">Register now to rev up your automotive experience! Do not miss out on exclusive access to the latest industry updates, special offers, and important event details. Join us in driving innovation and making your automotive journey even more extraordinary!</p>
                         </div>
                         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                             <form onSubmit={handleRegister} className="card-body">
@@ -111,7 +112,7 @@ const Register = () => {
                                     </label>
                                     <input type="password" name="password" placeholder="password" className="input input-bordered" required />
                                     <label className="label">
-                                        <p className="text-center mt-5">Already have an account?<Link className="text-[#fe3e01] font-bold" to="/login"> Login</Link></p>
+                                        <p className="text-center mt-5">Already have an account?<Link className="text-[#EA001E] font-bold" to="/login"> Login</Link></p>
                                     </label>
                                     <label>
                                         <div className='flex justify-center items-center text-base font-semibold'>
@@ -123,7 +124,7 @@ const Register = () => {
                                     </label>
                                 </div>
                                 <div className="form-control mt-2">
-                                    <button className="btn bg-[#fe3e01] text-white">Register</button>
+                                    <button className="btn bg-[#EA001E] text-white">Register</button>
                                 </div>
                             </form>
                             <div className='pb-2'>

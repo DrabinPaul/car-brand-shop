@@ -1,6 +1,7 @@
-import  { useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
+import { FaCar } from 'react-icons/fa';
 import { AuthContext } from '../../providers/AuthProviders';
 
 const Login = () => {
@@ -63,53 +64,54 @@ const Login = () => {
     };
     return (
         <div>
-            <div className='mb-10 lg:mb-4'>
-                <div className="hero min-h-screen">
-                    <div className="hero-content  flex-col lg:flex-row">
-                        <div className="text-center lg:text-left">
-                            <div className='flex justify-center pb-5'>
-                                <img src="https://pro-theme.com/html/dvents/assets/media/general/ui-decor-1.png" alt="" />
+            <div className='mb-10 lg:mb-20'>
+                <div className="hero mt-7">
+                    <div className="">
+                        <div className="text-center mb-5 lg:text-left">
+                            <div className='flex justify-center mb-2'>
+                                <FaCar className="text-2xl lg:text-5xl text-[#EA001E]"></FaCar>
                             </div>
-                            <h1 className="text-5xl text-center font-extrabold"><span className='text-[#fe3e01]'>Login</span> now!</h1>
-                            <p className="py-6 text-center text-[#777]">Step into our magical wedding world and be part of our love story. Login now to share our special day</p>
-
+                            <h1 className="text-4xl text-center font-extrabold mb-4"><span className='text-[#EA001E]'>Login</span> now!</h1>
                         </div>
 
-                        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                            <form onSubmit={handleLogin} className="card-body">
-                                <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text">Email</span>
-                                    </label>
-                                    <input type="email" name="email" placeholder="email" className="input input-bordered" required />
+                        <div className='flex justify-center'>
+                            <div className="card flex-shrink-0 w-[400px] max-w-sm shadow-2xl bg-base-100">
+                                <form onSubmit={handleLogin} className="card-body">
+                                    <div className="form-control">
+                                        <label className="label">
+                                            <span className="label-text">Email</span>
+                                        </label>
+                                        <input type="email" name="email" placeholder="email" className="input input-bordered" required />
+                                    </div>
+                                    <div className="form-control">
+                                        <label className="label">
+                                            <span className="label-text">Password</span>
+                                        </label>
+                                        <input type="password" name="password" placeholder="password" className="input input-bordered" required />
+                                        <label className="label">
+                                            <p className="text-center mt-5">Do not have an account?<Link className="text-[#EA001E] font-bold" to="/register"> Register</Link></p>
+                                        </label>
+                                        <label>
+                                            <div className='flex justify-center items-center text-base font-semibold'>
+                                                Or signin with
+                                                <span className='pl-2 cursor-pointer' onClick={handleGoogleLogin}>
+                                                    <span className='text-2xl'><FcGoogle></FcGoogle></span>
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div className="form-control mt-6">
+                                        <button className="btn bg-[#EA001E] text-white">Login</button>
+                                    </div>
+                                </form>
+                                <div className='pb-2'>
+                                    {
+                                        loginError && <p className='text-red-500 text-sm text-center font-bold '>{loginError}</p>
+                                    }
                                 </div>
-                                <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text">Password</span>
-                                    </label>
-                                    <input type="password" name="password" placeholder="password" className="input input-bordered" required />
-                                    <label className="label">
-                                        <p className="text-center mt-5">Do not have an account?<Link className="text-[#fe3e01] font-bold" to="/register"> Register</Link></p>
-                                    </label>
-                                    <label>
-                                        <div className='flex justify-center items-center text-base font-semibold'>
-                                            Or signin with
-                                            <span className='pl-2 cursor-pointer' onClick={handleGoogleLogin}>
-                                                <span className='text-2xl'><FcGoogle></FcGoogle></span>
-                                            </span>
-                                        </div>
-                                    </label>
-                                </div>
-                                <div className="form-control mt-6">
-                                    <button className="btn bg-[#fe3e01] text-white">Login</button>
-                                </div>
-                            </form>
-                            <div className='pb-2'>
-                                {
-                                    loginError && <p className='text-red-500 text-sm text-center font-bold '>{loginError}</p>
-                                }
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
