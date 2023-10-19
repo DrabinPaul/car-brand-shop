@@ -37,7 +37,7 @@ const ProductCard = () => {
             <div className="mt-20">
                 <div className="text-center mb-10">
                     <h2 className="text-5xl font-extrabold text-center pb-2 text-[#EA001E]">Our Products</h2>
-                    <p className="text-[#777]">Experience BMW: Luxury, Power, Precision. Elevate Your Drive</p>
+                    <p className="w-[800px] mx-auto text-[#777]">Our Cars: Explore our exceptional collection of vehicles. From sleek sedans to versatile SUVs, our cars offer style, performance, and cutting-edge technology. Find the perfect ride for your lifestyle. Drive into the future with our carefully curated selection.</p>
                 </div>
 
                 <div className="mb-10">
@@ -99,7 +99,9 @@ const ProductCard = () => {
                                         <h2 className="text-2xl font-bold"><span className="text-[#777]">Price:</span> {product.price}$</h2>
                                     </div>
                                     <div className="card-actions justify-center mt-2">
-                                        <button className='text-xl flex justify-center items-center px-8 py-1 bg-[#EA001E] font-medium text-white rounded-full hover:bg-[#807676] transition duration-300 ease-in-out'>Update</button>
+                                        <Link to={`/update/${product._id}`}>
+                                            <button className='text-xl flex justify-center items-center px-8 py-1 bg-[#EA001E] font-medium text-white rounded-full hover:bg-[#807676] transition duration-300 ease-in-out'>Update</button>
+                                        </Link>
                                         <Link to={`/details/${product._id}`}>
                                             <button className='text-xl flex justify-center items-center px-8 py-1 bg-[#EA001E] font-medium text-white rounded-full hover:bg-[#807676] transition duration-300 ease-in-out'>Details</button>
                                         </Link>

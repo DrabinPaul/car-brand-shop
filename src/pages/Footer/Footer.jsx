@@ -3,10 +3,10 @@ import { FaCar } from 'react-icons/fa';
 const Footer = () => {
     return (
         <div>
-            <footer className="footer footer-center p-10 bg-[#1f1f1f] text-primary-content">
+            <footer className="footer footer-center p-10 bg-[#000C21] text-primary-content">
                 <aside>
                     <span className='text-[#EA001E] text-5xl'><FaCar></FaCar></span>
-                    <h2 className="text-4xl font-bold text-[#EA001E]">D<span className='text-white'>MOTORS</span> </h2>
+                    <h2 className="text-4xl font-extrabold text-[#EA001E]">D<span className='text-white'>MOTORS</span> </h2>
                     <p className="font-bold text-white">
                         DMOTOR Industries Ltd. <br />Providing reliable tech since 1992
                     </p>

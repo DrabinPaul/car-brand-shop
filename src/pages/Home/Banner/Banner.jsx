@@ -17,12 +17,13 @@ const Banner = () => {
       <div className="absolute top-0 left-0 w-full h-full" style={overlayStyle}></div>
       <div className="absolute top-0 left-0 w-full h-full" style={contentStyle}></div>
       <div className="absolute top-0 left-0 w-full h-full text-white">
-        <div className='mt-40 pl-10'>
-          <h2 className="text-6xl font-bold my-5">We Don't Sell Cars We</h2>
-          <h2 className="text-6xl font-bold pb-5">Sell A Dream</h2>
-          <h2 className="text-5xl pb-5">Huge discount upto <span className='text-[#EA001E] font-bold'>20%</span></h2>
-          <div className='pt-10'>
-            <Link to='/login'><button className='text-3xl flex justify-center items-center px-8 py-2 bg-[#EA001E] font-bold text-white rounded-full hover:bg-[#c92d33] transition duration-300 ease-in-out'>Book Now<span><BsArrowRightShort className='ml-4 text-5xl font-extrabold'></BsArrowRightShort></span></button></Link>
+        <div className='mt-36 pl-10'>
+          <h2 className="text-5xl font-bold my-5">We Don't Sell Cars We</h2>
+          <h2 className="text-5xl font-bold pb-5">Sell A Dream</h2>
+          <p className='mb-5'>Discover a wide range of cars,from classics to modern marvels. <br />List your vehicle for sale or find your dream ride effortlessly. </p>
+          <h2 className="text-4xl">Huge discount upto <span className='text-[#EA001E] font-bold'>20%</span></h2>
+          <div className='pt-5'>
+            <Link to='/login'><button className='text-3xl flex justify-center items-center px-7 py-2 bg-[#EA001E] font-semiboldz text-white rounded-full hover:bg-[#c92d33] transition duration-300 ease-in-out'>Book Now<span><BsArrowRightShort className='ml-4 text-5xl font-extrabold'></BsArrowRightShort></span></button></Link>
           </div>
         </div>
 

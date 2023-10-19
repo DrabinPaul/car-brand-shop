@@ -58,8 +58,8 @@ const AddProducts = () => {
                 <div className="absolute top-0 left-0 w-full h-full z-20 bg-black opacity-70"></div>
                 <div className="relative z-30 text-center p-10 text-white">
                     <h2 className="text-5xl font-bold my-5">Add Product</h2>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit maxime deleniti quis, corporis sit consectetur temporibus voluptate vel incidunt quas inventore ullam sapiente aliquid asperiores nemo fuga odio laboriosam dolor dolore. Iusto culpa quo blanditiis aperiam maiores id necessitatibus exercitationem animi suscipit.
+                    <p className="w-[800px] mx-auto">
+                    Enhance your automotive listings by adding your products to DMOTORS. Reach a wide audience of car enthusiasts and buyers. Showcase your vehicles, parts, or accessories with ease. It's the ultimate platform to connect with potential customers and make your automotive offerings stand out. List your products on <span className="text-[#EA001E]">DMOTORS</span> today and drive your sales to new heights!
                     </p>
                 </div>
             </div>
@@ -135,7 +135,9 @@ const AddProducts = () => {
                         </label>
                     </div>
 
-                    <input type="submit" value="Add Product" className="btn btn-block text-white bg-[#EA001E]" />
+                    <div className="flex justify-center">
+                    <input type="submit" value="Add Product" className="btn text-white w-1/2 bg-[#EA001E]" />
+                    </div>
 
                 </form>
             </div>
