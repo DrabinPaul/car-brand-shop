@@ -50,7 +50,7 @@ const AddProducts = () => {
                 <div
                     className="absolute top-0 left-0 w-full h-full z-10"
                     style={{
-                        backgroundImage: 'url("https://images.pexels.com/photos/6894428/pexels-photo-6894428.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")', // Replace with your image URL
+                        backgroundImage: 'url("https://images.pexels.com/photos/6894428/pexels-photo-6894428.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")',
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                     }}
