@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -36,7 +36,7 @@ const ProductCard = () => {
         <div>
             <div className="mt-20">
                 <div className="text-center mb-10">
-                    <h2 className="text-5xl font-extrabold text-center pb-2 text-[#EA001E]">New Collection</h2>
+                    <h2 className="text-5xl font-extrabold text-center pb-2 text-[#EA001E]">Our Products</h2>
                     <p className="text-[#777]">Experience BMW: Luxury, Power, Precision. Elevate Your Drive</p>
                 </div>
 
@@ -71,16 +71,16 @@ const ProductCard = () => {
                             <SwiperSlide>
                                 <img src="https://images.pexels.com/photos/10549262/pexels-photo-10549262.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
                             </SwiperSlide>
-                            
+
 
                         </Swiper>
                     </>
                 </div>
 
             </div>
-            <div className="my-20">
+            <div className="mt-32">
                 <div>
-                    <h2 className="text-5xl font-extrabold text-center pb-2 text-[#EA001E]">Products</h2>
+                    <h2 className="text-5xl font-extrabold text-center pb-2 text-[#EA001E]">Our Collection</h2>
                     <p className="text-center text-[#777]">Discover your dream car with us.</p>
                 </div>
                 <div className="flex justify-center items-center">
@@ -91,19 +91,18 @@ const ProductCard = () => {
                                     <img className="rounded-t-lg w-full h-[200px] lg:h-[300px] lg:w-[450px]" src={product.photoUrl} alt="picture" />
                                 </figure>
                                 <div className="card-body rounded-b-lg h-[250px]">
-                                    <h2 className="text-2xl font-extrabold text-[#EA001E]">{product.name}</h2>
-
-                                    <div className="flex justify-between mt-5">
-                                        <h2 className="text-2xl font-bold"><span className="text-[#777]">Brand:</span> {product.brandName}</h2>
-                                        <h2 className="text-2xl font-bold"><span className="text-[#777]">Type:</span> {product.type}</h2>
-                                    </div>
-                                    <div className="flex justify-between">
+                                    <h2 className="text-2xl my-2 font-extrabold text-[#EA001E]">{product.name}</h2>
+                                    <h2 className="text-2xl font-bold"><span className="text-[#777]">Brand:</span> {product.brandName}</h2>
+                                    <h2 className="text-2xl font-bold"><span className="text-[#777]">Type:</span> {product.type}</h2>
+                                    <div className="flex justify-between px-5">
                                         <h2 className="text-2xl font-bold"><span className="text-[#777]">Rating:</span> {product.rating}/5</h2>
                                         <h2 className="text-2xl font-bold"><span className="text-[#777]">Price:</span> {product.price}$</h2>
                                     </div>
                                     <div className="card-actions justify-center mt-2">
-                                        <button className='text-xl flex justify-center items-center px-8 py-1 bg-[#EA001E] font-semibold text-white rounded-full hover:bg-[#807676] transition duration-300 ease-in-out'>Update</button>
-                                        <button className='text-xl flex justify-center items-center px-8 py-1 bg-[#EA001E] font-semibold text-white rounded-full hover:bg-[#807676] transition duration-300 ease-in-out'>Details</button>
+                                        <button className='text-xl flex justify-center items-center px-8 py-1 bg-[#EA001E] font-medium text-white rounded-full hover:bg-[#807676] transition duration-300 ease-in-out'>Update</button>
+                                        <Link to={`/details/${product._id}`}>
+                                            <button className='text-xl flex justify-center items-center px-8 py-1 bg-[#EA001E] font-medium text-white rounded-full hover:bg-[#807676] transition duration-300 ease-in-out'>Details</button>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
