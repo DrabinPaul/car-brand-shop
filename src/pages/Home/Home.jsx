@@ -5,7 +5,7 @@ import MakeItEasy from "./MakeItEasy/MakeItEasy";
 import Welcome from "./WelcomePage/Welcome";
 
 const Home = () => {
-    const productCard = useLoaderData(); 
+    const productCard = useLoaderData();
     return (
         <div>
             <Banner />
@@ -15,14 +15,13 @@ const Home = () => {
             </div>
             <div className="md:grid grid-cols-3 gap-5 m-10">
                 {productCard.map((product) => (
-                    <Link to={`/productCard/${product.name}`} key={product.name}>
-                        <img src={product.img} alt={product.name} />
-                        <div className="border bg-gray-100 p-2 text-center font-bold uppercase">
-                            <p>{product.name}</p>
-                        </div>
+                    <Link className="relative card w-96 bg-base-100 shadow-xl image-full" to={`/productCard/${product.name}`} key={product.name}>
+                        <figure><img src={product.img} alt="picture" /></figure>
+                        <h2 className="text-white text-xl font-bold bottom-5 left-4 z-10 absolute">{product.name}</h2>
                     </Link>
                 ))}
             </div>
+
             <MakeItEasy />
             <Counter />
         </div>
