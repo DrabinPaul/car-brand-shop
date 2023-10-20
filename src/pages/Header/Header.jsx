@@ -21,7 +21,7 @@ const Header = () => {
         <NavLink to='/addProducts' className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "text-[#EA001E] underline text-xl font-bold pr-4" : "text-xl font-bold pr-4"
         }>Add Product</NavLink>
-        <NavLink to='/aboutUs' className={({ isActive, isPending }) =>
+        <NavLink to='/mycart/cart' className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "text-[#EA001E] underline text-xl font-bold pr-4" : "text-xl font-bold pr-4"
         }>My Cart</NavLink>
         <NavLink to='/login'

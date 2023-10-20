@@ -29,7 +29,7 @@ const ProductCard = () => {
     }, [])
 
     const filterProducts = products.filter((product) =>
-        product.brandName.toLowerCase() === brandProduct.name.toLowerCase()
+        product?.brandName?.toLowerCase() == brandProduct?.name?.toLowerCase()
     );
 
     return (
@@ -83,36 +83,40 @@ const ProductCard = () => {
                     <h2 className="text-5xl font-extrabold text-center pb-2 text-[#EA001E]">Our Collection</h2>
                     <p className="text-center text-[#777]">Discover your dream car with us.</p>
                 </div>
-                <div className="flex justify-center items-center">
-                    <div className="md:grid grid-cols-2 gap-20 m-10 text-center">
-                        {filterProducts.map((product) => (
-                            <div key={product._id} className="card card-compact  md:w-[350px] lg:w-[450px] bg-base-100 mb-5 shadow-lg">
-                                <figure>
-                                    <img className="rounded-t-lg w-full h-[200px] lg:h-[300px] lg:w-[450px]" src={product.photoUrl} alt="picture" />
-                                </figure>
-                                <div className="card-body rounded-b-lg h-[250px]">
-                                    <h2 className="text-2xl my-2 font-extrabold text-[#EA001E]">{product.name}</h2>
-                                    <h2 className="text-2xl font-bold"><span className="text-[#777]">Brand:</span> {product.brandName}</h2>
-                                    <h2 className="text-2xl font-bold"><span className="text-[#777]">Type:</span> {product.type}</h2>
-                                    <div className="flex justify-between px-5">
-                                        <h2 className="text-2xl font-bold"><span className="text-[#777]">Rating:</span> {product.rating}/5</h2>
-                                        <h2 className="text-2xl font-bold"><span className="text-[#777]">Price:</span> {product.price}$</h2>
+                
+                        <div className="flex justify-center items-center">
+                            <div className="md:grid grid-cols-2 gap-20 m-10 text-center">
+                                {filterProducts.map((product) => (
+                                    <div key={product._id} className="card card-compact  md:w-[350px] lg:w-[450px] bg-base-100 mb-5 shadow-lg">
+                                        <figure>
+                                            <img className="rounded-t-lg w-full h-[200px] lg:h-[300px] lg:w-[450px]" src={product.photoUrl} alt="picture" />
+                                        </figure>
+                                        <div className="card-body rounded-b-lg h-[250px]">
+                                            <h2 className="text-2xl my-2 font-extrabold text-[#EA001E]">{product.name}</h2>
+                                            <h2 className="text-2xl font-bold"><span className="text-[#777]">Brand:</span> {product.brandName}</h2>
+                                            <h2 className="text-2xl font-bold"><span className="text-[#777]">Type:</span> {product.type}</h2>
+                                            <div className="flex justify-between px-5">
+                                                <h2 className="text-2xl font-bold"><span className="text-[#777]">Rating:</span> {product.rating}/5</h2>
+                                                <h2 className="text-2xl font-bold"><span className="text-[#777]">Price:</span> {product.price}$</h2>
+                                            </div>
+                                            <div className="card-actions justify-center mt-2">
+                                                <Link to={`/update/${product._id}`}>
+                                                    <button className='text-xl flex justify-center items-center px-8 py-1 bg-[#EA001E] font-medium text-white rounded-full hover:bg-[#807676] transition duration-300 ease-in-out'>Update</button>
+                                                </Link>
+                                                <Link to={`/details/${product._id}`}>
+                                                    <button className='text-xl flex justify-center items-center px-8 py-1 bg-[#EA001E] font-medium text-white rounded-full hover:bg-[#807676] transition duration-300 ease-in-out'>Details</button>
+                                                </Link>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className="card-actions justify-center mt-2">
-                                        <Link to={`/update/${product._id}`}>
-                                            <button className='text-xl flex justify-center items-center px-8 py-1 bg-[#EA001E] font-medium text-white rounded-full hover:bg-[#807676] transition duration-300 ease-in-out'>Update</button>
-                                        </Link>
-                                        <Link to={`/details/${product._id}`}>
-                                            <button className='text-xl flex justify-center items-center px-8 py-1 bg-[#EA001E] font-medium text-white rounded-full hover:bg-[#807676] transition duration-300 ease-in-out'>Details</button>
-                                        </Link>
-                                    </div>
-                                </div>
+
+                                ))}
+
                             </div>
+                        </div>
 
-                        ))}
+                
 
-                    </div>
-                </div>
             </div>
         </div>
     );

@@ -10,17 +10,19 @@ const Home = () => {
         <div>
             <Banner />
             <Welcome />
-            <div className="max-w-4xl mx-auto my-10">
-                <h1 className="text-center font-bold text-2xl text-[#EA001E] md:text-3xl lg:text-6xl mb-5">Our Featured Brands</h1>
-                <p className="text-center text-[#777]">Explore Our Featured Car Brands: Discover automotive excellence with our curated selection of top car brands. From luxury icons to trusted favorites, find performance, style, and innovation. Elevate your journey today!</p>
-            </div>
-            <div className="md:grid grid-cols-3 gap-5 mx-20 mb-20">
-                {productCard.map((product) => (
-                    <Link className="relative card w-96 bg-base-100 shadow-xl image-full" to={`/productCard/${product.name}`} key={product.name}>
-                        <figure><img src={product.img} alt="picture" /></figure>
-                        <h2 className="text-white text-xl font-bold bottom-5 left-4 z-10 absolute">{product.name}</h2>
-                    </Link>
-                ))}
+            <div className="p-5 lg:p-0">
+                <div className="max-w-4xl mx-auto my-10">
+                    <h1 className="text-center font-bold text-2xl text-[#EA001E] md:text-3xl lg:text-6xl mb-5">Our Featured Brands</h1>
+                    <p className="text-center text-[#777]">Explore Our Featured Car Brands: Discover automotive excellence with our curated selection of top car brands. From luxury icons to trusted favorites, find performance, style, and innovation. Elevate your journey today!</p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:mx-20 mb-20">
+                    {productCard.map((product) => (
+                        <Link className="relative card w-96 bg-base-100 shadow-xl image-full" to={`/productCard/${product.name}`} key={product.name}>
+                            <figure><img src={product.img} alt="picture" /></figure>
+                            <h2 className="text-white text-xl font-bold bottom-5 left-4 z-10 absolute">{product.name}</h2>
+                        </Link>
+                    ))}
+                </div>
             </div>
 
             <MakeItEasy />
