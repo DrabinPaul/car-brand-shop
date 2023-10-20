@@ -29,7 +29,7 @@ const ProductCard = () => {
     }, [])
 
     const filterProducts = products.filter((product) =>
-        product?.brandName?.toLowerCase() == brandProduct?.name?.toLowerCase()
+        product?.brandName?.toLowerCase() === brandProduct?.name?.toLowerCase()
     );
 
     return (

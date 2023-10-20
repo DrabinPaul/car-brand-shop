@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const ProductUpdate = () => {
@@ -25,7 +25,7 @@ const ProductUpdate = () => {
         console.log(newUpdatedProduct);
  
 
-        fetch(`https://brandshop-server-side-drabin-paul-n0c1iwb8i.vercel.app/product/${_id}`, {
+        fetch(`https://brandshop-server-side-drabin-paul-n0c1iwb8i.vercel.app/update/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -45,9 +45,6 @@ const ProductUpdate = () => {
                 }
             })
     }
-
-
-
 
     return (
         <div>
@@ -138,8 +135,9 @@ const ProductUpdate = () => {
                         </label>
                     </div>
 
+
                     <div className="flex justify-center">
-                        <input type="submit" value="Add Product" className="btn text-white w-1/2 bg-[#EA001E]" />
+                        <input  type="submit" value="Update Product" className="btn text-white w-1/2 bg-[#EA001E]" />
                     </div>
 
                 </form>
