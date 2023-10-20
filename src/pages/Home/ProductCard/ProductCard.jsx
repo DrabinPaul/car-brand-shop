@@ -83,7 +83,20 @@ const ProductCard = () => {
                     <h2 className="text-5xl font-extrabold text-center pb-2 text-[#EA001E]">Our Collection</h2>
                     <p className="text-center text-[#777]">Discover your dream car with us.</p>
                 </div>
-                
+                {
+                    filterProducts.length === 0 ? (
+                        <div className=" my-36">
+                            <h1 className="text-2xl font-medium lg:w-[800px] mx-auto text-center">Sorry, there are currently no products available for this brand type. We are constantly updating our inventory, so please check back later or explore our other brand categories for a wide selection of high-quality cars.</h1>
+                            <div className="flex justify-center">
+                            <Link
+                                to="/"
+                                className="mt-8 px-4 py-2 bg-[#EA001E] font-bold text-white rounded-full hover:bg-[#c92d33] transition duration-300 ease-in-out"
+                            >
+                                Go Back to Home
+                            </Link>
+                            </div>
+                        </div>
+                    ) : (
                         <div className="flex justify-center items-center">
                             <div className="md:grid grid-cols-2 gap-20 m-10 text-center">
                                 {filterProducts.map((product) => (
@@ -115,7 +128,9 @@ const ProductCard = () => {
                             </div>
                         </div>
 
-                
+                    )
+
+                }
 
             </div>
         </div>
