@@ -8,7 +8,7 @@ const ProductDetails = () => {
     console.log(productDetails);
 
     const handleAddToCart = () => {
-        fetch("http://localhost:5000/cart", {
+        fetch("https://brandshop-server-side-drabin-paul-n0c1iwb8i.vercel.app/cart", {
             method: "POST",
             headers: {
                 "content-type": "application/json",

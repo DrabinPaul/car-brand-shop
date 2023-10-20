@@ -14,7 +14,7 @@ const MakeItEasy = () => {
     };
 
     return (
-        <div className="relative min-h-[1000px] lg:min-h-[600px] mb-10">
+        <div className="relative min-h-[1200px] lg:min-h-[600px] mb-10">
             <div className="absolute top-0 left-0 w-full h-full" style={overlayStyle}></div>
             <div className="absolute top-0 left-0 w-full h-full" style={contentStyle}></div>
             <div className="absolute top-0 left-0 w-full h-full text-center text-white">
@@ -25,35 +25,34 @@ const MakeItEasy = () => {
                 </div>
                 <div className='max-w-6xl mx-auto justify-center'>
                     <div className='grid grid-cols-1 lg:grid-cols-4 mt-20 gap-20 mx-28 lg:mx-0'>
-                        <div className='mb-10'>
+                        <div className='mb-5'>
                             <span className="relative">
                                 <div className="absolute w-[200px] h-[200px] rounded-full" style={{ backgroundColor: '#EA001E' }}></div>
-                                <MdPersonSearch className="text-5xl lg:text-8xl text-white relative z-10 top-4 left-20 lg:left-14"></MdPersonSearch>
-                                <h2 className='text-lg text-white font-medium felx justify-center relative z-10 top-2 right-4'>View Our <br />Inventory</h2>
+                                <MdPersonSearch className="text-6xl lg:text-8xl text-white relative z-10 top-4 left-[72px] lg:left-14"></MdPersonSearch>
+                                <h2 className='text-lg text-white font-medium felx justify-center relative z-10 top-2 lg:right-4'>View Our <br />Inventory</h2>
                             </span>
                         </div>
-                        <div>
+                        <div className='mb-5'>
                             <span className="relative">
                                 <div className="absolute w-[200px] h-[200px] rounded-full" style={{ backgroundColor: '#EA001E' }}></div>
-                                <BiDollarCircle className="text-2xl lg:text-8xl text-white relative z-10 top-5 left-12"></BiDollarCircle>
-                                <h2 className='text-lg text-white font-medium felx justify-center relative z-10 top-4 right-4'>Value Your <br />Trade-In</h2>
-                            </span>
-                        </div>
-
-                        <div>
-                            <span className="relative">
-                                <div className="absolute w-[200px] h-[200px] rounded-full" style={{ backgroundColor: '#EA001E' }}></div>
-                                <CgFileDocument className="text-2xl lg:text-8xl text-white relative z-10 top-8 left-[50px]"></CgFileDocument>
-                                <h2 className='text-lg text-white font-medium felx justify-center relative z-10 top-6 right-4'>Get Easy <br />Financing</h2>
-
+                                <BiDollarCircle className="text-6xl lg:text-8xl text-white relative z-10 top-5 left-[68px] lg:left-12"></BiDollarCircle>
+                                <h2 className='text-lg text-white font-medium felx justify-center relative z-10 top-4 lg:right-4'>Value Your <br />Trade-In</h2>
                             </span>
                         </div>
 
+                        <div className='mb-5'>
+                            <span className="relative">
+                                <div className="absolute w-[200px] h-[200px] rounded-full" style={{ backgroundColor: '#EA001E' }}></div>
+                                <CgFileDocument className="text-6xl lg:text-8xl text-white relative z-10 top-8 left-[70px] lg:left-[50px]"></CgFileDocument>
+                                <h2 className='text-lg text-white font-medium felx justify-center relative z-10 top-6 pt-2 lg:pt-0 lg:right-4'>Get Easy <br />Financing</h2>
+
+                            </span>
+                        </div>
                         <div>
                             <div className="relative">
                                 <div className="absolute w-[200px] h-[200px] rounded-full" style={{ backgroundColor: '#EA001E' }}></div>
-                                <MdPayment className="text-2xl lg:text-8xl text-white relative z-10 top-8 left-12"></MdPayment>
-                                <h2 className='text-lg text-white font-medium felx justify-center relative z-10 top-5 right-4'>Make A <br />Payment</h2>
+                                <MdPayment className="text-6xl lg:text-8xl text-white relative z-10 top-8 left-[68px] lg:left-12"></MdPayment>
+                                <h2 className='text-lg text-white font-medium felx justify-center relative z-10 top-5 pt-2 lg:pt-0 lg:right-4'>Make A <br />Payment</h2>
                             </div>
                         </div>
 

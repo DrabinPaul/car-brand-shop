@@ -42,7 +42,7 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="flex items-center justify-center">
-                    <a className="text-2xl lg:text-3xl mr-1  font-bold text-[#EA001E]">D<span className="text-black">MOTORS</span></a>
+                    <a className="text-xl lg:text-3xl mr-1  font-bold text-[#EA001E]">D<span className="text-black">MOTORS</span></a>
                     <FaCar className="text-2xl lg:text-3xl text-[#EA001E]"></FaCar>
                 </div>
 

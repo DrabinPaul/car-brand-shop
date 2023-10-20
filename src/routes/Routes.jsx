@@ -9,6 +9,7 @@ import ProductCard from "../pages/Home/ProductCard/ProductCard";
 import ProductDetails from "../pages/Home/ProductDetails/ProductDetails";
 import ProductUpdate from "../pages/Home/ProductUpdate/ProductUpdate";
 import MyCart from "../pages/Home/MyCart/MyCart";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -19,11 +20,11 @@ const router = createBrowserRouter([
             {
                 path:'/',
                 element:<Home></Home>,
-                loader: () => fetch("http://localhost:5000/productCard"),
+                loader: () => fetch("https://brandshop-server-side-drabin-paul-n0c1iwb8i.vercel.app/productCard"),
             },
             {
                 path:'/addProducts',
-                element:<AddProducts></AddProducts>
+                element:<PrivateRoute><AddProducts></AddProducts></PrivateRoute>
             },
             {
                 path:'/login',
@@ -35,24 +36,24 @@ const router = createBrowserRouter([
             },
             {
               path:"/mycart/cart",
-              element:<MyCart></MyCart>,
-              loader: () => fetch("http://localhost:5000/cart"),
+              element:<PrivateRoute><MyCart></MyCart></PrivateRoute>,
+              loader: () => fetch("https://brandshop-server-side-drabin-paul-n0c1iwb8i.vercel.app/cart"),
             },
             {
                 path: "/productCard/:name",
                 element: <ProductCard></ProductCard>,
-                loader: ({ params }) => fetch(`http://localhost:5000/productCard/${params.name}`),
+                loader: ({ params }) => fetch(`https://brandshop-server-side-drabin-paul-n0c1iwb8i.vercel.app/productCard/${params.name}`),
           },
           {
             path:"/details/:id",
-            element:<ProductDetails></ProductDetails>,
-            loader: ({ params }) => fetch(`http://localhost:5000/details/${params.id}`),
+            element:<PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
+            loader: ({ params }) => fetch(`https://brandshop-server-side-drabin-paul-n0c1iwb8i.vercel.app/details/${params.id}`),
 
           },
           {
             path: "/update/:id",
-            element: <ProductUpdate></ProductUpdate> ,
-            loader: ({ params }) => fetch(`http://localhost:5000/update/${params.id}`),
+            element: <PrivateRoute><ProductUpdate></ProductUpdate></PrivateRoute> ,
+            loader: ({ params }) => fetch(`https://brandshop-server-side-drabin-paul-n0c1iwb8i.vercel.app/update/${params.id}`),
           }
         ]
     }

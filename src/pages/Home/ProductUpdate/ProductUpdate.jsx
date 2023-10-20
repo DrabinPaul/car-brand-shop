@@ -25,7 +25,7 @@ const ProductUpdate = () => {
         console.log(newUpdatedProduct);
  
 
-        fetch(`http://localhost:5000/product/${_id}`, {
+        fetch(`https://brandshop-server-side-drabin-paul-n0c1iwb8i.vercel.app/product/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

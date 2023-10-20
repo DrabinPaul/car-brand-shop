@@ -20,7 +20,7 @@ const AddProducts = () => {
         console.log(newProduct);
 
 
-        fetch('http://localhost:5000/product', {
+        fetch('https://brandshop-server-side-drabin-paul-n0c1iwb8i.vercel.app/product', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -58,18 +58,18 @@ const AddProducts = () => {
                 <div className="absolute top-0 left-0 w-full h-full z-20 bg-black opacity-70"></div>
                 <div className="relative z-30 text-center p-10 text-white">
                     <h2 className="text-5xl font-bold my-5">Add Product</h2>
-                    <p className="w-[800px] mx-auto">
+                    <p className="lg:w-[800px] mx-auto">
                     Enhance your automotive listings by adding your products to DMOTORS. Reach a wide audience of car enthusiasts and buyers. Showcase your vehicles, parts, or accessories with ease. It's the ultimate platform to connect with potential customers and make your automotive offerings stand out. List your products on <span className="text-[#EA001E]">DMOTORS</span> today and drive your sales to new heights!
                     </p>
                 </div>
             </div>
 
 
-            <div className="p-20 bg-[#f4f1f0]">
+            <div className="p-10 bg-[#f4f1f0]">
                 <form onSubmit={handleAddProduct}>
                     {/* form row-1  */}
-                    <div className="md:flex gap-5 mb-4">
-                        <div className="form-control md:w-1/2">
+                    <div className="lg:flex gap-5 mb-4">
+                        <div className="form-control w-1/2">
                             <label className="label">
                                 <span className="label-text text-base font-medium">Product Name</span>
                             </label>
@@ -78,7 +78,7 @@ const AddProducts = () => {
                             </label>
                         </div>
                         <div className="form-control md:w-1/2">
-                            <label className="label ml-4">
+                            <label className="label lg:ml-4">
                                 <span className="label-text text-base font-medium">Brand Name</span>
                             </label>
                             <label className="input-group">
@@ -97,7 +97,7 @@ const AddProducts = () => {
                             </label>
                         </div>
                         <div className="form-control md:w-1/2">
-                            <label className="label ml-4">
+                            <label className="label lg:ml-4">
                                 <span className="label-text text-base font-medium">Product Price</span>
                             </label>
                             <label className="input-group">
@@ -116,7 +116,7 @@ const AddProducts = () => {
                             </label>
                         </div>
                         <div className="form-control md:w-1/2">
-                            <label className="label ml-4">
+                            <label className="label  ml-4">
                                 <span className="label-text text-base font-medium">Short Description</span>
                             </label>
                             <label className="input-group">

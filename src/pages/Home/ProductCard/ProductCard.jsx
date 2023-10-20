@@ -23,7 +23,7 @@ const ProductCard = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/product')
+        fetch('https://brandshop-server-side-drabin-paul-n0c1iwb8i.vercel.app/product')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])

@@ -3,11 +3,16 @@ import Banner from "./Banner/Banner";
 import Counter from "./Counter/Counter";
 import MakeItEasy from "./MakeItEasy/MakeItEasy";
 import Welcome from "./WelcomePage/Welcome";
+import { useState } from "react";
 
 const Home = () => {
     const productCard = useLoaderData();
+
+
+
     return (
         <div>
+
             <Banner />
             <Welcome />
             <div className="p-5 lg:p-0">

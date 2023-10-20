@@ -42,8 +42,6 @@ const Register = () => {
         }
 
 
-
-
         createUser(email, password)
             .then(result => {
                 e.target.reset();
